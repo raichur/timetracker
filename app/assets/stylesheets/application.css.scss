@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$theme: #0093fc;
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+
+* {
+  font-family: Roboto;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #fafafa;
+}
+#container {
+
+}
+#main, footer {
+  margin: 0 auto;
+  width: 64%;
+}
+#main {
+  margin-top: 70px;
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background: $theme;
+  padding-left: 18%;
+  padding-right: 18%;
+  li {
+    font-size: 1.4rem;
+    padding: 15px;
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 200;
+    color: white;
+    opacity: .9;
+    transition: opacity ease .4s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .active a {
+    font-weight: bold;
+    opacity: 1;
+  }
+}

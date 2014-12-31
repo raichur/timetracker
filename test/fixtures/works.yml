@@ -7,7 +7,7 @@
 <% 20.times do |n| %>
 word_<%= n %>:
   datetimeperformed: <%= Time.now - n.days %>
-  user: <%= n % 2 == 0 ? 'brianhoke' : 'janedoe' %>
+  user: <%= n % 2 == 0 ? 'joshuaraichur' : 'janedoe' %>
   project: <%= n % 3 == 0 ? 'projectxyz' : 'secondproj' %>
   hours: <%= n % 8 + 1 %>
 <% end %>

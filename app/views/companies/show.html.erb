@@ -1,1 +1,16 @@
 <h1><%= @company.name %></h1>
+
+<table class="table-fill">
+  <thead>
+    <th class="text-left">Project</th>
+    <th class="text-left">Company</th>
+  </thead>
+  <tbody>
+    <% @company.projects.each do |project| %>
+    <tr>
+      <td><%= link_to project, project %></td>
+      <td><%= link_to project.company.name, project.company %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

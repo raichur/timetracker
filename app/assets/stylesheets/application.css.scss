@@ -17,28 +17,30 @@
 $theme: #0093fc;
 $dgrey: #1d1d1d;
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:200,500,700);
 
 * {
-  font-family: Roboto;
+  font-family: Helvetica Neue;
   padding: 0;
   margin: 0;
 }
 body {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   background: darken($dgrey, 15%);
 }
 #container {
+  margin: 0;
+  padding: 0;
     background: #EBEBEB;
-    h1 {
-      padding: 10px;
+    h1, h2, h3, h4, h5, h6, p {
+      padding-left: 10px;
+      padding-right: 10px;
     }
 }
 #main, footer {
   a {
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
     color: $theme;
   }
   margin: 0 auto;
@@ -46,11 +48,16 @@ body {
 }
 #main {
   margin-top: 60px;
-  h1 {
+  h1, h2 {
     margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 3rem;
+    margin-bottom: 10px;
     font-weight: 700;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+
   }
   li {
     font-size: 1.3rem;
@@ -59,7 +66,7 @@ body {
 nav {
   top: 0;
   position: fixed;
-  width: 60%;
+  width: 80%;
   background: $theme;
   li {
     font-size: 1.4rem;
@@ -74,9 +81,16 @@ nav {
       opacity: 1;
     }
   }
+  li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    float: right;
+    margin-left: -2px;
+    margin-right: 0;
+  }
   a {
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 400;
     color: white;
   }
   .active a {
@@ -117,13 +131,15 @@ th {
   color: #EBEBEB;
   background: $dgrey;
   border-right: 1px solid #343a45;
-  font-size: 1.4rem;
-  font-weight: 100;
+  font-size: 1.2rem;
+  font-weight: 400;
   padding: 20px;
   text-align:left;
   vertical-align: middle;
 }
-
+th:last-child, tr:last-child {
+  border-right: 1px solid $dgrey;
+}
 tr {
   border-top: 1px solid #C1C3D1;
   border-bottom: 1px solid #C1C3D1;
@@ -157,4 +173,14 @@ td {
     color: white !important;
   }
   z-index: 3;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  nav {
+    width: 100%;
+  }
 }

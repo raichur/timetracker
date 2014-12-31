@@ -1,2 +1,28 @@
 <h1><%= @project.name %></h1>
-<p><%= @project.slug %></p>
+
+<h3><b>Company: </b><%= @project.company.name %></h3>
+<h3><b>Default Rate: </b><%= @project.default_rate %></h3>
+<h4><b>Slug: </b><%= @project.slug %></h4>
+
+<h2>Works in <%= @project.name %></h2>
+
+<table class="table-fill">
+  <thead>
+    <th class="text-left">View</th>
+    <th class="text-left">Project</th>
+    <th class="text-left">User</th>
+    <th class="text-left">Date performed</th>
+    <th class="text-left">Number of hours</th>
+  </thead>
+  <tbody>
+    <% @project.works.each do |work| %>
+    <tr>
+      <td class="td-link"><%= link_to "View", work %></td>
+      <td><%= link_to work.project, work.project %></td>
+      <td><%= work.user %></td>
+      <td><%= work.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
+      <td><%= work.hours %> hr</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

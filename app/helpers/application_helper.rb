@@ -16,6 +16,21 @@ module ApplicationHelper
         displaytext: 'Works',
         controllername: 'works',
         linkurl: works_path
+      },
+      {
+        displaytext: 'New Company',
+        controllername: '',
+        linkurl: new_company_path
+      },
+      {
+        displaytext: 'New Project',
+        controllername: '',
+        linkurl: new_project_path
+      },
+      {
+        displaytext: 'New Work',
+        controllername: '',
+        linkurl: new_work_path
       }
     ]
   end

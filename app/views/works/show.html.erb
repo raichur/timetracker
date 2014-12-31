@@ -1,6 +1,6 @@
+<h3><%= link_to 'Edit Work', edit_work_path(@work), class: "edit" %></h3>
+<h1><%= @work.project %></h1>
+
 <p><b>Date/Time Performed: </b><%= @work.datetimeperformed %></p>
 <p><b>User: </b><%= @work.user.fname %> <%= @work.user.lname %></p>
 <p><b>Hours: </b><%= @work.hours %> hr</p>
-
-<br/>
-<h3><%= link_to 'Edit Work', edit_work_path(@work) %></h3>

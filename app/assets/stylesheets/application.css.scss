@@ -17,6 +17,7 @@
 $theme: #0093fc;
 $dgrey: #1d1d1d;
 $dtheme: #007bd3;
+$bg: #EBEBEB;
 
 * {
   font-family: Helvetica Neue;
@@ -24,6 +25,7 @@ $dtheme: #007bd3;
   margin: 0;
 }
 body {
+  transition: all ease .3s;
   margin-left: 10%;
   margin-right: 10%;
   background: darken($dgrey, 15%);
@@ -31,7 +33,7 @@ body {
 #container {
   margin: 0;
   padding: 0;
-    background: #EBEBEB;
+    background: $bg;
     h1, h2, h3, h4, h5, h6, p, form, ul {
       padding-left: 20px;
       padding-right: 20px;
@@ -125,6 +127,7 @@ nav {
   top: 0;
   position: fixed;
   width: 80%;
+  z-index: 8;
   background: $theme;
   li {
     font-size: 1.4rem;
@@ -186,7 +189,7 @@ footer {
 }
 
 th {
-  color: #EBEBEB;
+  color: $bg;
   background: $dgrey;
   border-right: 1px solid #343a45;
   font-size: 1.2rem;
@@ -214,7 +217,7 @@ tr:last-child {
 }
 
 tr:nth-child(odd) td {
-  background: #EBEBEB;
+  background: $bg;
 }
 td {
   background: #FFFFFF;
@@ -276,6 +279,15 @@ td {
   .flash {
     width: 100%;
   }
+}
+.edit {
+  margin-top: 20px;
+  float: right;
+}
+.remoteform {
+  background: darken($bg, 10%);
+  margin-top: 20px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 900px) {
   nav li {

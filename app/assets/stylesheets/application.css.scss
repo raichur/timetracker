@@ -37,6 +37,12 @@ body {
       padding-right: 20px;
     }
     #errors, .field_with_errors label{
+      -webkit-animation-duration: .6s;
+      animation-duration: .6s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
       font-style: italic;
       font-weight: bold;
       color: #e94242;
@@ -271,13 +277,18 @@ td {
     width: 100%;
   }
 }
-#errors {
-  -webkit-animation-duration: .6s;
-  animation-duration: .6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+@media screen and (max-width: 900px) {
+  nav li {
+    font-size: 1rem !important;
+  }
+  nav {
+    li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+      padding-top: 15px;
+    }
+  }
+  #main {
+    margin-top: 50px;
+  }
 }
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}

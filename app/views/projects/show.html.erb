@@ -4,6 +4,10 @@
 <h3><b>Default Rate: </b><%= @project.default_rate %></h3>
 <h4><b>Slug: </b><%= @project.slug %></h4>
 
+<br/>
+<h3><%= link_to 'Edit Project', edit_project_path(@project) %></h3>
+
+
 <h2>Works in <%= @project.name %></h2>
 
 <% if @project.works.size > 0 %>

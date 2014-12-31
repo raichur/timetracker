@@ -1,4 +1,5 @@
 <h1><%= @company.name %></h1>
+<h3><%= link_to 'Edit Company', edit_company_path(@company) %></h3>
 
 <% if @company.projects.size > 0 %>
   <table class="table-fill">

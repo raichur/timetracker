@@ -30,7 +30,10 @@ body {
   background: darken($dgrey, 15%);
 }
 #container {
-
+    background: #EBEBEB;
+    h1 {
+      padding: 10px;
+    }
 }
 #main, footer {
   a {

@@ -1,9 +1,13 @@
 <h1>Companies</h1>
-<table class="table-fill">
-  <thead>
-    <th class="text-left">Company</th>
-  </thead>
-  <tbody>
-    <%= render partial: "company", collection: @companies %>
-  </tbody>
-</table>
+<% if @companies.size > 0 %>
+  <table class="table-fill">
+    <thead>
+      <th class="text-left">Company</th>
+    </thead>
+    <tbody>
+      <%= render partial: "company", collection: @companies %>
+    </tbody>
+  </table>
+<% else %>
+  <h3 class="msg">There are no companies yet.</h3>
+<% end %>

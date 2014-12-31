@@ -6,15 +6,19 @@
 
 <h2>Works in <%= @project.name %></h2>
 
-<table class="table-fill">
-  <thead>
-    <th class="text-left">View</th>
-    <th class="text-left">Project</th>
-    <th class="text-left">User</th>
-    <th class="text-left">Date performed</th>
-    <th class="text-left">Number of hours</th>
-  </thead>
-  <tbody>
-    <%= render partial: "works/work", collection: @project.works %>
-  </tbody>
-</table>
+<% if @project.works.size > 0 %>
+  <table class="table-fill">
+    <thead>
+      <th class="text-left">View</th>
+      <th class="text-left">Project</th>
+      <th class="text-left">User</th>
+      <th class="text-left">Date performed</th>
+      <th class="text-left">Number of hours</th>
+    </thead>
+    <tbody>
+      <%= render partial: "works/work", collection: @project.works %>
+    </tbody>
+  </table>
+<% else %>
+<h3 class="msg">There are no work items for this project yet.</h3>
+<% end %>

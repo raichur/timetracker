@@ -1,13 +1,17 @@
 <h1>Works</h1>
-<table class="table-fill">
-  <thead>
-    <th class="text-left">View</th>
-    <th class="text-left">Project</th>
-    <th class="text-left">User</th>
-    <th class="text-left">Date performed</th>
-    <th class="text-left">Number of hours</th>
-  </thead>
-  <tbody>
-      <%= render partial: "work", collection: @works %>
-  </tbody>
-</table>
+<% if @works.size > 0 %>
+  <table class="table-fill">
+    <thead>
+      <th class="text-left">View</th>
+      <th class="text-left">Project</th>
+      <th class="text-left">User</th>
+      <th class="text-left">Date performed</th>
+      <th class="text-left">Number of hours</th>
+    </thead>
+    <tbody>
+        <%= render partial: "work", collection: @works %>
+    </tbody>
+  </table>
+<% else %>
+<h3 class="msg">There are no works yet.</h3>
+<% end %>

@@ -7,14 +7,6 @@
     <th class="text-left">Number of hours</th>
   </thead>
   <tbody>
-    <% @works.each do |work| %>
-    <tr>
-      <td class="td-link"><%= link_to "View", work %></td>
-      <td><%= link_to work.project, work.project %></td>
-      <td><%= work.user %></td>
-      <td><%= work.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
-      <td><%= work.hours %> hr</td>
-    </tr>
-    <% end %>
+      <%= render partial: "work", collection: @works %>
   </tbody>
 </table>

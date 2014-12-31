@@ -7,12 +7,15 @@
 joshuaraichur:
   fname: Joshua
   lname: Raichur
+  email: jr@example.com
   company: bentleyhoke
 janedoe:
   fname: Jane
   lname: Doe
+  email: jd@example.com
   company: bentleyhoke
 ralphmartinez:
   fname: Ralph
   lname: Martinez
+  email: rm@example.com
   company: clientinc

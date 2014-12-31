@@ -32,9 +32,17 @@ body {
   margin: 0;
   padding: 0;
     background: #EBEBEB;
-    h1, h2, h3, h4, h5, h6, p, form {
+    h1, h2, h3, h4, h5, h6, p, form, ul {
       padding-left: 20px;
       padding-right: 20px;
+    }
+    #errors, .field_with_errors label{
+      font-style: italic;
+      font-weight: bold;
+      color: #e94242;
+      li {
+        margin-left: 20px;
+      }
     }
     h1 {
       padding-top: 10px;
@@ -262,4 +270,21 @@ td {
   .flash {
     width: 100%;
   }
+}
+#errors {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

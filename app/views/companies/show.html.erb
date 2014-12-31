@@ -1,13 +1,21 @@
+<% if flash[:notice] %>
+<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <h1><%= @company.name %></h1>
 
-<table class="table-fill">
-  <thead>
-    <th class="text-left">Project</th>
-    <th class="text-left">Company</th>
-  </thead>
-  <tbody>
-    <% @company.projects.each do |project| %>
-    <%= render partial: "projects/project", collection: @company.projects %>
-    <% end %>
-  </tbody>
-</table>
+<% if @company.projects.size > 0 %>
+  <table class="table-fill">
+    <thead>
+      <th class="text-left">Project</th>
+      <th class="text-left">Company</th>
+    </thead>
+    <tbody>
+      <% @company.projects.each do |project| %>
+      <%= render partial: "projects/project", collection: @company.projects %>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h3 class="error">This company has no projects yet.</h3>
+<% end %>

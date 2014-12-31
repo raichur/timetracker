@@ -33,8 +33,11 @@ body {
   padding: 0;
     background: #EBEBEB;
     h1, h2, h3, h4, h5, h6, p, form {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    h1 {
+      padding-top: 10px;
     }
     form {
       padding-bottom: 30px;
@@ -215,7 +218,35 @@ td {
   }
   z-index: 3;
 }
-
+.error {
+  font-style: italic;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.notice {
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #00eaa4;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden;
+    -webkit-transform: translateY(-50px);
+    -webkit-animation: slideDown 2.5s ease forwards;
+    -moz-transform:    translateY(-50px);
+    -moz-animation:    slideDown 2.5s ease forwards;
+}
+@-webkit-keyframes slideDown {
+  0%, 100% { -webkit-transform: translateY(-50px); }
+  10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+  0%, 100% { -moz-transform: translateY(-50px); }
+  10%, 90% { -moz-transform: translateY(0px); }
+}
 @media screen and (max-width: 1000px) {
   body {
     margin-left: 0;

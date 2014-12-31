@@ -15,4 +15,10 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def create
+    @project = Project.new(params[:project].permit(:name))
+    @project.save
+    redirect_to @project
+  end
+
 end

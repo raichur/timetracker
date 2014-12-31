@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
   get 'recentworks/:days' => 'works#index'
 
+  get 'timetrackerproject/:slug' => 'projects#show'
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

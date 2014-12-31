@@ -15,7 +15,7 @@
  */
 
 $theme: #0093fc;
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,500,700);
 
 * {
   font-family: Roboto;
@@ -23,12 +23,17 @@ $theme: #0093fc;
   margin: 0;
 }
 body {
-  background: #fafafa;
+  background: #f7f7f7;
 }
 #container {
 
 }
 #main, footer {
+  a {
+    text-decoration: none;
+    font-weight: 800;
+    color: $theme;
+  }
   margin: 0 auto;
   width: 64%;
 }
@@ -36,7 +41,7 @@ body {
   margin-top: 70px;
   h1 {
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 700;
   }
 }
 nav {
@@ -49,20 +54,37 @@ nav {
   li {
     font-size: 1.4rem;
     padding: 15px;
+    transition: all ease .4s;
+    opacity: .9;
     display: inline-block;
+    margin-left: -2px;
+    margin-right: 0;
+    &:hover {
+      background: #0090f7;
+      opacity: 1;
+    }
   }
   a {
     text-decoration: none;
     font-weight: 200;
     color: white;
-    opacity: .9;
-    transition: opacity ease .4s;
-    &:hover {
-      opacity: 1;
-    }
   }
   .active a {
-    font-weight: bold;
+    opacity: 1;
+  }
+  .active {
+    border-top: 3px solid white;
+    background: #0085e5;
+    &:hover {
+      background: #0085e5;
+    }
+  }
+}
+footer {
+  margin-top: 30px;
+  opacity: .7;
+  transition: all ease .4s;
+  &:hover {
     opacity: 1;
   }
 }

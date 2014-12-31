@@ -9,6 +9,11 @@
 </head>
 <body>
     <div id="container">
+
+      <% if flash[:notice] %>
+      <div class="notice flash"><%= flash[:notice] %></div>
+      <% end %>
+
       <nav>
         <% nav_items.each do |nav_item| %>
           <%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>

@@ -224,20 +224,22 @@ td {
   padding-top: 20px;
   padding-bottom: 30px;
 }
-.notice {
+.flash {
     position: absolute;
     z-index: 6;
     top: 0;
     left: 0;
     right: 0;
-    background: #00eaa4;
     text-align: center;
     line-height: 2.5;
     overflow: hidden;
     -webkit-transform: translateY(-50px);
-    -webkit-animation: slideDown 2.5s ease forwards;
+    -webkit-animation: slideDown 2s ease forwards;
     -moz-transform:    translateY(-50px);
-    -moz-animation:    slideDown 2.5s ease forwards;
+    -moz-animation:    slideDown 2s ease forwards;
+}
+.notice {
+  background: #00eaa4;
 }
 @-webkit-keyframes slideDown {
   0%, 100% { -webkit-transform: translateY(-50px); }

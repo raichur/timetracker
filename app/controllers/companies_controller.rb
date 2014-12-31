@@ -19,7 +19,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(params[:company].permit(:name))
     @company.save
-    flash[:notice] = 'Company successfully created'
+    flash[:notice] = 'New company successfully created'
     redirect_to @company
   end
 

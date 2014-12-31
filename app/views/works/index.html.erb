@@ -1,6 +1,16 @@
-<h1>Works</h1>
-<ul>
-  <% @works.each do |work| %>
-  <li><%= link_to work, work %></li>
-  <% end %>
-</ul>
+<table class="table-fill">
+  <thead>
+    <th class="text-left">Works</th>
+    <th class="text-left">Date</th>
+    <th class="text-left">Time</th>
+  </thead>
+  <tbody>
+    <% @works.each do |work| %>
+    <tr>
+      <td><%= link_to work.user, work %></td>
+      <td><%= link_to work.datetimeperformed.strftime('%m/%d/%Y %H:%M'), work %></td>
+      <td><%= link_to work.hours, work %> hr</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

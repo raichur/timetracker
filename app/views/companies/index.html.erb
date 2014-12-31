@@ -1,6 +1,6 @@
-<h1>Companies: index</h1>
+<h1>Companies</h1>
 <ul>
   <% @companies.each do |company| %>
-    <li><%= link_to company.name, company %></li>
+    <li><%= link_to company, company %></li>
   <% end %>
 </ul>

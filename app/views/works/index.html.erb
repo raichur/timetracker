@@ -1,15 +1,19 @@
 <table class="table-fill">
   <thead>
-    <th class="text-left">Works</th>
-    <th class="text-left">Date</th>
-    <th class="text-left">Time</th>
+    <th class="text-left">Project</th>
+    <th class="text-left">User</th>
+    <th class="text-left">Date performed</th>
+    <th class="text-left">Number of hours</th>
+    <th class="text-left">View</th>
   </thead>
   <tbody>
     <% @works.each do |work| %>
     <tr>
-      <td><%= link_to work.user, work %></td>
-      <td><%= link_to work.datetimeperformed.strftime('%m/%d/%Y %H:%M'), work %></td>
-      <td><%= link_to work.hours, work %> hr</td>
+      <td class="td-link"><%= link_to "View", work %></td>
+      <td><%= link_to work.project, work.project %></td>
+      <td><%= work.user %></td>
+      <td><%= work.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
+      <td><%= work.hours %> hr</td>
     </tr>
     <% end %>
   </tbody>

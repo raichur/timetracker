@@ -17,7 +17,7 @@
 $theme: #0093fc;
 $dgrey: #1d1d1d;
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,500,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:200,500,700);
 
 * {
   font-family: Roboto;
@@ -25,7 +25,9 @@ $dgrey: #1d1d1d;
   margin: 0;
 }
 body {
-  background: #f7f7f7;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: darken($dgrey, 15%);
 }
 #container {
 
@@ -54,18 +56,16 @@ body {
 nav {
   top: 0;
   position: fixed;
-  width: 100%;
+  width: 60%;
   background: $theme;
-  padding-left: 18%;
-  padding-right: 18%;
   li {
     font-size: 1.4rem;
     padding: 15px;
     transition: all ease .4s;
     opacity: .9;
     display: inline-block;
-    margin-left: -2px;
-    margin-right: 0;
+    margin-right: -2px;
+    margin-left: 0;
     &:hover {
       background: #0090f7;
       opacity: 1;
@@ -88,13 +88,16 @@ nav {
   }
 }
 footer {
-  padding: 20px;
+  margin: 0;
   padding-top: 25px;
   padding-bottom:  25px;
-  opacity: .7;
+  background: $dgrey;
+  color: white;
   transition: all ease .4s;
-  &:hover {
-    opacity: 1;
+  p {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -102,14 +105,13 @@ footer {
 
 .table-fill {
   background: white;
-  border-radius: 3px;
   border-collapse: collapse;
   padding: 5px;
   width: 100%;
 }
 
 th {
-  color: #D5DDE5;
+  color: #EBEBEB;
   background: $dgrey;
   border-right: 1px solid #343a45;
   font-size: 1.4rem;
@@ -122,7 +124,6 @@ th {
 tr {
   border-top: 1px solid #C1C3D1;
   border-bottom: 1px solid #C1C3D1;
-  color: #666B85;
   font-size: 16px;
   font-weight: normal;
 }
@@ -138,7 +139,6 @@ tr:last-child {
 tr:nth-child(odd) td {
   background: #EBEBEB;
 }
-
 td {
   background: #FFFFFF;
   padding: 20px;
@@ -147,4 +147,11 @@ td {
   font-weight: 300;
   font-size: 18px;
   border-right: 1px solid rgba(0, 0, 0, .05);
+}
+.td-link {
+  background-color: #007bd3 !important;
+  a {
+    color: white !important;
+  }
+  z-index: 3;
 }

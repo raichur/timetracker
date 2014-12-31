@@ -1,0 +1,6 @@
+<h1>Works: index</h1>
+<ul>
+  <% @works.each do |work| %>
+  <li><%= link_to work.project.name, work %></li>
+  <% end %>
+</ul>

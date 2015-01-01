@@ -9,12 +9,12 @@ projectxyz:
   company: clientinc
   default_rate: 60
   slug: project-xyz
-  user: joshuaraichur
+  owner: joshuaraichur
   description: 'This is project xyzs description'
 secondproj:
   name: Second Proj
   company: abcltd
   default_rate: 125
   slug: second-proj
-  user: joshuaraichur
+  owner: joshuaraichur
   description: 'This is project second proj nsdjf ksd description'

@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(params[:project].permit(:name, :slug, :company_id, :default_rate, :description))
+    @project = Project.new(params[:project].permit(:name, :slug, :company_id, :default_rate, :description, :owner_id))
     if @project.save
       flash[:notice] = 'New project successfully created'
       redirect_to @project
@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
 
-    if @project.update(params[:project].permit(:name, :slug, :company_id, :default_rate, :description))
+    if @project.update(params[:project].permit(:name, :slug, :company_id, :default_rate, :description, :owner_id))
       flash[:notice] = 'Project successfully updated'
       redirect_to @project
     else

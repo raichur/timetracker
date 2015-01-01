@@ -1,4 +1,5 @@
 class WorksController < ApplicationController
+  before_filter :authenticate_user!
   def index
     if (params[:days])
       @works = Work.recentdays(params[:days]).order('datetimeperformed desc')

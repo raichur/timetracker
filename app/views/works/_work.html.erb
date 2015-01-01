@@ -5,4 +5,5 @@
   <td><%= work.user %></td>
   <td><%= work.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
   <td><%= work.hours %> hr</td>
+  <td><% if work.doc %><%= link_to '✓', "/uploads/#{work.doc}", :target => "_blank" %><% else %>✖<% end %></td>
 </tr>

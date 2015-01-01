@@ -6,5 +6,5 @@
 <p><b>User: </b><%= @work.user.fname %> <%= @work.user.lname %></p>
 <p><b>Hours: </b><%= @work.hours %> hr</p>
 <% if @work.doc %>
-<p><b>Document attached: </b><%= link_to @work.doc, "/uploads/#{@work.doc}", :target => "_blank", id: "uploadBtn" %></p>
+<p><b>Document attached: </b><%= link_to @work.doc, "/uploads/#{@work.doc}", :target => "_blank" %></p>
 <% end %>

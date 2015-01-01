@@ -12,7 +12,7 @@
 <% end %>
 
 <% doajax = false unless (defined? doajax) %>
-<%= form_for(@work, remote: doajax) do |f| %>
+<%= form_for(@work, remote: doajax, :html => {:multipart => true}) do |f| %>
 <div>
 
   <%= f.label :project_id %>
@@ -24,14 +24,24 @@
   <%= f.label :user_id %>
   <%= f.collection_select(:user_id, User.all.order('lname, fname'), :id, :to_s, prompt: true) %>
 
-  <%= f.label :datetimeformed, 'Date/Time Performed' %>
+  <%= f.label :datetimeperformed, 'Date/Time Performed' %>
   <%= f.datetime_select :datetimeperformed %>
 
   <%= f.label :hours %>
   <%= f.select(:hours, [1, 2, 3, 4, 5, 6, 7, 8], prompt: true) %>
+
+  <%= label_tag :doc, 'Notes (optional)' , id: 'uploadText' %>
+  <%= file_field_tag :doc, id: "uploadBtn" %>
 
 </div>
 <div>
   <%= f.submit @work.new_record? ? "Create Work" : "Update Work" %>
 </div>
 <% end %>
+
+<script>
+document.getElementById("uploadBtn").onchange = function () {
+  $('head').append('<style>#uploadText:after { content: ": ' + this.value + ')";} #uploadText {content: "" !important;}</style>');
+}
+
+</script>

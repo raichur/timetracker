@@ -1,6 +1,6 @@
 <h3><%= link_to 'Edit Project', edit_project_path(@project), class: "edit" %></h3>
 <h1><%= @project.name %></h1>
-
+<h2><b>Description: </b><%= @project.description %></h2>
 <h3><b>Company: </b><%= @project.company.name %></h3>
 <h3><b>Default Rate: </b><%= @project.default_rate %></h3>
 <h4><b>Slug: </b><%= @project.slug %></h4>

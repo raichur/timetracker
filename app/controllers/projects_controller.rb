@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!
   def index
     @projects = Project.all
   end
@@ -18,7 +19,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(params[:project].permit(:name, :slug, :company_id, :default_rate))
+    @project = Project.new(params[:project].permit(:name, :slug, :company_id, :default_rate, :description))
     if @project.save
       flash[:notice] = 'New project successfully created'
       redirect_to @project
@@ -34,7 +35,7 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
 
-    if @project.update(params[:project].permit(:name, :slug, :company_id, :default_rate))
+    if @project.update(params[:project].permit(:name, :slug, :company_id, :default_rate, :description))
       flash[:notice] = 'Project successfully updated'
       redirect_to @project
     else

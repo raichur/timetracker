@@ -10,4 +10,5 @@ word_<%= n %>:
   user: <%= n % 2 == 0 ? 'joshuaraichur' : 'janedoe' %>
   project: <%= n % 3 == 0 ? 'projectxyz' : 'secondproj' %>
   hours: <%= n % 8 + 1 %>
+  description: 'This is project second proj nsdjf ksd description'
 <% end %>

@@ -1,6 +1,7 @@
 <tr>
   <td class="td-link"><%= link_to "View", work %></td>
   <td><%= link_to work.project, work.project %></td>
+  <td><%= work.description %></td>
   <td><%= work.user %></td>
   <td><%= work.datetimeperformed.strftime('%m/%d/%Y %H:%M') %></td>
   <td><%= work.hours %> hr</td>

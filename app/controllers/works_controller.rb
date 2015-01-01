@@ -16,7 +16,7 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours))
+    @work = Work.new(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours, :description))
     respond_to do |format|
       if @work.save
         format.html { redirect_to @work, notice: 'New work successfully created' }
@@ -36,7 +36,7 @@ class WorksController < ApplicationController
   def update
     @work = Work.find(params[:id])
 
-    if @work.update(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours))
+    if @work.update(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours, :description))
       flash[:notice] = 'Work successfully updated'
       redirect_to @work
     else

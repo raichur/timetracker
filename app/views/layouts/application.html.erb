@@ -21,7 +21,7 @@
           <%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
         <% end %>
         <%= user_logged_in_msg %>
-        <li><a href="javascript:void(0)" class="has-sub">+</a>
+        <li class="has-sub-link"><a href="javascript:void(0)" class="has-sub">+ Add New</a>
           <ul class="sub-nav">
             <li><%= link_to 'New Company', new_company_path %></li>
             <li><%= link_to 'New Project', new_project_path %></li>

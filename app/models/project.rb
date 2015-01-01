@@ -17,9 +17,16 @@ class Project < ActiveRecord::Base
 
   def self.export_csv(projects)
     CSV.generate() do |csv|
-      csv << column_names
+      csv << ['name', 'company', 'default_rate', 'created_at', 'owner', 'most recent work item']
       projects.each do |project|
-        csv << project.attributes.values_at(*column_names)
+        csv << [
+          project.name,
+          project.company,
+          project.default_rate,
+          project.created_at,
+          project.user,
+          project.works.order('created_at DESC').first
+        ]
       end
     end
   end

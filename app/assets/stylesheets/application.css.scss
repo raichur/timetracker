@@ -371,6 +371,12 @@ td {
 .edit {
   margin-top: 20px;
   float: right;
+  background: $dgrey;
+  padding: 7px;
+  transition: .3s all ease;
+  &:hover {
+    background: lighten($dgrey, 10%);
+  }
 }
 .remoteform {
   background: darken($bg, 10%);

@@ -17,7 +17,7 @@ class Project < ActiveRecord::Base
 
   def self.export_csv(projects)
     CSV.generate() do |csv|
-      csv << ['name', 'company', 'default_rate', 'created_at', 'owner', 'most recent work item']
+      csv << ['Name', 'Company', 'Default rate', 'Created at', 'Owner', 'Most recent work item']
       projects.each do |project|
         csv << [
           project.name,

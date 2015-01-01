@@ -129,12 +129,39 @@ nav {
   width: 80%;
   z-index: 8;
   background: $theme;
+  .sub-nav {
+    opacity: 0;
+    transition: .1s all ease;
+    position:absolute;
+    visibility:hidden;
+    left:0;
+    right:0;
+  }
+  li.active ul {
+    opacity: 1;
+    visibility:visible;
+    text-align:left;
+  }
+  .sub-nav > li {
+    display:inline-block;
+  }
+  .sub-nav {
+    margin-top: 15px;
+    background: $theme;
+    font-size: 1.2rem;
+    &:hover {
+      background: #0090f7;
+      opacity: 1;
+    }
+  }
+  .sub-nav > li a {
+    border:none;
+  }
   #logo {
-    color: white !important;
+    margin-left: -15px;
     svg {
       margin-bottom: -1px;
-      fill: #FFF !important;
-      margin-right: 8px;
+      fill: #FFF;
     }
   }
   li {
@@ -186,6 +213,7 @@ footer {
     margin-right: 10px;
   }
 }
+
 
 /*** Table Styles **/
 
@@ -251,7 +279,7 @@ td {
 }
 .flash {
     position: absolute;
-    z-index: 6;
+    z-index: 13;
     top: 0;
     left: 0;
     right: 0;
